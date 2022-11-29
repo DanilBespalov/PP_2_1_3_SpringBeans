@@ -3,11 +3,11 @@ package app.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("timer")
 public class Timer {
-    @Autowired
-    private Long nanoTime = System.nanoTime();
 
+    private final Long nanoTime = System.nanoTime();
+    @Autowired
     public Long getTime() {
         return nanoTime;
     }
